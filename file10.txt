@@ -1,7 +1,2 @@
-<<<<<<< HEAD
-asdfjlksfoisdfoij
-=======
+
 qwerty
-
-
->>>>>>> a508bfeb03c22306e1e3ce2d69039568bc673426
