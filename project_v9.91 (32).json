@@ -1,9 +1,7 @@
  {
   "export_type": "project",
   "projects": [
-    {
-     8-4a98-8afa-c195df78f5d6",
-      "name": "v9.91",
+
       "config": {
         "channel": "@tim",
         "text": "v9.91"
