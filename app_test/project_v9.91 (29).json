@@ -1,0 +1,191 @@
+ {
+  "export_type": "project",
+  "projects": [
+    {
+      "id": "110ef442-72a8-4a98-8afa-c195df78f5d6",
+      "name": "v9.91",
+      "config": {
+        "channel": "@tim",
+        "text": "v9.91"
+      },
+      "workflows": [
+        "71d5929f-2ddb-4aef-8fe4-c6eae4a77e5f"
+      ],
+      "dependencies": []
+    }
+  ],
+  "tray_export_version": 3,
+  "workflows": [
+    {
+      "id": "71d5929f-2ddb-4aef-8fe4-c6eae4a77e5f",
+      "created": "2020-11-06T11:38:03.493Z",
+      "workspace_id": "44d1c022-8750-4ea5-849e-6154258ac505",
+      "project_id": "110ef442-72a8-4a98-8afa-c195df78f5d6",
+      "group": "3f63a940-0875-4b9e-af15-67b2c01cfee6",
+      "creator": "44d1c022-8750-4ea5-849e-6154258ac505",
+      "version": {
+        "id": "9e3bf89d-8187-467f-873b-7e4a2a965fd3",
+        "created": "2020-11-06T16:19:39.534Z"
+      },
+      "title": "v9.91",
+      "enabled": true,
+      "tags": [],
+      "settings": {
+        "config": {
+          "channel": "@tim",
+          "text": "v9.91"
+        },
+        "input_schema": {},
+        "output_schema": {}
+      },
+      "steps_structure": [
+        {
+          "name": "trigger",
+          "type": "normal",
+          "content": {}
+        },
+        {
+          "name": "slack-1",
+          "type": "normal",
+          "content": {}
+        },
+        {
+          "name": "jira-1",
+          "type": "normal",
+          "content": {}
+        }
+      ],
+      "steps": {
+        "trigger": {
+          "title": "Webhook",
+          "connector": {
+            "name": "webhook",
+            "version": "2.2"
+          },
+          "operation": "webhook",
+          "output_schema": {},
+          "error_handling": {},
+          "properties": {
+            "allow_cors": {
+              "type": "boolean",
+              "value": true
+            }
+          }
+        },
+        "slack-1": {
+          "title": "Slack",
+          "connector": {
+            "name": "slack",
+            "version": "5.0"
+          },
+          "operation": "send_message",
+          "output_schema": {},
+          "error_handling": {},
+          "authentication": {
+            "group": "8b5c055c-ce3b-40c7-826d-c348f6d2defc",
+            "title": "Tim Morris's Slack account",
+            "service_icon": {
+              "icon_type": "url",
+              "value": "//s3.amazonaws.com/images.tray.io/static/icons/c25033a972715dbbdb7e73ac79261230.png"
+            },
+            "service_id": "932f74fe-9b2a-4773-b9f1-edc381fcc91a",
+            "auth_app_id": "c621652d-4d77-4b18-8783-625211a6ba0c",
+            "scopes": [
+              "users:read",
+              "groups:write",
+              "users:read.email",
+              "channels:read",
+              "chat:write:user",
+              "reminders:write",
+              "channels:write",
+              "groups:read",
+              "chat:write:bot"
+            ]
+          },
+          "properties": {
+            "link_names": {
+              "type": "boolean",
+              "value": false
+            },
+            "reply_broadcast": {
+              "type": "boolean",
+              "value": false
+            },
+            "parse": {
+              "type": "string",
+              "value": "none"
+            },
+            "username": {
+              "type": "string",
+              "value": "Tray.io"
+            },
+            "as_user": {
+              "type": "boolean",
+              "value": false
+            },
+            "token": {
+              "type": "jsonpath",
+              "value": "$.auth.access_token"
+            },
+            "channel": {
+              "type": "jsonpath",
+              "value": "$.config.channel"
+            },
+            "text": {
+              "type": "jsonpath",
+              "value": "$.config.channel"
+            }
+          }
+        },
+        "jira-1": {
+          "title": "Jira",
+          "connector": {
+            "name": "jira",
+            "version": "2.1"
+          },
+          "operation": "list_projects",
+          "output_schema": {},
+          "error_handling": {},
+          "authentication": {
+            "group": "4a34f843-fa85-468f-a021-c6e58485f368",
+            "title": "Tim Morris's Jira account",
+            "service_icon": {
+              "icon_type": "url",
+              "value": "//s3.amazonaws.com/images.tray.io/static/icons/jira.png"
+            },
+            "service_id": "90e0fe61-411e-46c4-a51c-ce7d8d3a909e",
+            "auth_app_id": "e999ab5a-4ffe-4bde-b23d-13e1136b6aa1",
+            "scopes": []
+          },
+          "properties": {
+            "instance_url": {
+              "type": "jsonpath",
+              "value": "$.config.channel"
+            },
+            "consumer_key": {
+              "type": "jsonpath",
+              "value": "$.auth.consumer_key"
+            },
+            "shared_secret": {
+              "type": "jsonpath",
+              "value": "$.auth.shared_secret"
+            },
+            "oauth_token": {
+              "type": "jsonpath",
+              "value": "$.auth.oauth_token"
+            },
+            "oauth_verifier": {
+              "type": "jsonpath",
+              "value": "$.auth.oauth_verifier"
+            },
+            "private_key": {
+              "type": "jsonpath",
+              "value": "$.auth.private_key"
+            }
+          }
+        }
+      },
+      "dependencies": []
+    }
+  ]
+}
