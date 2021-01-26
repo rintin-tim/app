@@ -1,6 +1,4 @@
-
-I am definitely the most important line to ever be typed
-
+I am definitely the most important line ever typed
 
 Extra line right here
 
