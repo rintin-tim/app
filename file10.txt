@@ -1,4 +1,4 @@
-I am the most important line ever written
+I am the most important line ever written. Bar none.
 
 Extra line right here
 
